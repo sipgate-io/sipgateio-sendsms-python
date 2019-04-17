@@ -96,6 +96,18 @@ response = requests.post(
 )
 ```
 
+#### Send SMS with sender number
+
+A sender number can be configured via the Web Interface.
+
+Proceed as follows:
+
+1. Log into your [sipgate account](https://app.sipgate.com/connections/sms)
+2. Use the sidebar to navigate to the **Connections** (_Anschlüsse_) tab
+3. Click **SMS** (if this option is not displayed you might need to book the **Web SMS** feature from the Feature Store)
+4. Click the gear icon on the right side of the **Caller ID** box and enter the desired sender number. 
+ 
+
 ### Web SMS Extensions
 
 A Web SMS extension consists of the letter 's' followed by a number (e.g. 's0'). The sipgate API uses the concept of Web SMS extensions to identify devices within your account that are enabled to send SMS. In this context the term 'device' does not necessarily refer to a hardware phone but rather a virtual representation.
