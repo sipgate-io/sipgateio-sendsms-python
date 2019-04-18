@@ -98,15 +98,12 @@ response = requests.post(
 
 #### Send SMS with sender number
 
-A sender number can be configured via the Web Interface.
-
-Proceed as follows:
+By default 'sipgate' will be used as sender. It is only possible to change the sender to a mobile phone number, by verifying the ownership of it. In order to accomplish this, proceed as follows:
 
 1. Log into your [sipgate account](https://app.sipgate.com/connections/sms)
 2. Use the sidebar to navigate to the **Connections** (_Anschlüsse_) tab
 3. Click **SMS** (if this option is not displayed you might need to book the **Web SMS** feature from the Feature Store)
-4. Click the gear icon on the right side of the **Caller ID** box and enter the desired sender number. 
- 
+4. Click the gear icon on the right side of the **Caller ID** box and enter the desired sender number.
 
 ### Web SMS Extensions
 
@@ -146,6 +143,8 @@ Possible reasons are:
 
 - [datetime documentation](https://docs.python.org/3/library/datetime.html)
 - [requests documentation](http://docs.python-requests.org/en/master/)
+- [sipgate team FAQ (DE)](https://teamhelp.sipgate.de/hc/de)
+- [sipgate basic FAQ (DE)](https://basicsupport.sipgate.de/hc/de)
 
 ### Contact Us
 
