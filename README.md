@@ -106,6 +106,7 @@ By default 'sipgate' will be used as the sender. It is only possible to change t
 2. Use the sidebar to navigate to the **Connections** (_Anschlüsse_) tab
 3. Click **SMS** (if this option is not displayed you might need to book the **Web SMS** feature from the Feature Store)
 4. Click the gear icon on the right side of the **Caller ID** box and enter the desired sender number.
+5. Proceed to follow the instructions on the website to verify the number.
 
 ### Web SMS Extensions
 
