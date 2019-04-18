@@ -13,6 +13,8 @@ For further information regarding the sipgate REST API please visit https://api.
 
 ### How To Use
 
+Navigate to the project's root directory.
+
 Install dependencies:
 
 ```bash
