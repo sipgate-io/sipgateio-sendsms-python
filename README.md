@@ -96,9 +96,9 @@ response = requests.post(
 )
 ```
 
-#### Send SMS with sender number
+#### Send SMS with custom sender number
 
-By default 'sipgate' will be used as sender. It is only possible to change the sender to a mobile phone number, by verifying the ownership of it. In order to accomplish this, proceed as follows:
+By default 'sipgate' will be used as the sender. It is only possible to change the sender to a mobile phone number by verifying ownership of said number. In order to accomplish this, proceed as follows:
 
 1. Log into your [sipgate account](https://app.sipgate.com/connections/sms)
 2. Use the sidebar to navigate to the **Connections** (_Anschlüsse_) tab
@@ -107,7 +107,7 @@ By default 'sipgate' will be used as sender. It is only possible to change the s
 
 ### Web SMS Extensions
 
-A Web SMS extension consists of the letter 's' followed by a number (e.g. 's0'). The sipgate API uses the concept of Web SMS extensions to identify devices within your account that are enabled to send SMS. In this context the term 'device' does not necessarily refer to a hardware phone but rather a virtual representation.
+A Web SMS extension consists of the letter 's' followed by a number (e.g. 's0'). The sipgate API uses the concept of Web SMS extensions to identify devices within your account that are enabled to send SMS. In this context the term 'device' does not necessarily refer to a hardware phone but rather a virtual connection.
 
 You can find out what your extension is as follows:
 
@@ -124,7 +124,7 @@ Possible reasons are:
 
 - incorrect or mistyped phone number
 - recipient phone is not connected to network
-- long message text, delivery can take a little longer
+- long message text - delivery can take a little longer
 
 #### HTTP Errors
 
@@ -132,7 +132,7 @@ Possible reasons are:
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | :-------: |
 | bad request (e.g. request body fields are empty or only contain spaces, timestamp is invalid etc.)                                                  |    400    |
 | username and/or password are wrong                                                                                                                  |    401    |
-| your account balance is insufficient                                                                                                                |    402    |
+| insufficient account balance                                                                                                                        |    402    |
 | no permission to use specified SMS extension (e.g. SMS feature not booked, user password must be reset in [web app](https://app.sipgate.com/login)) |    403    |
 | wrong REST API endpoint                                                                                                                             |    404    |
 | wrong request method                                                                                                                                |    405    |
