@@ -8,7 +8,7 @@ For further information regarding the sipgate REST API please visit https://api.
 
 ### Prerequisites
 
-- python3
+- python3.6
 - pip3
 
 ### How To Use
