@@ -87,7 +87,7 @@ requestBody = {
 }
 ```
 
-We use the python package 'requests' for request generation and execution. The `post` function takes as arguments the request URL, headers, an authorization header, and the request body. The request URL consists of the base URL defined above and the endpoint `/sessions/sms`. The function `HTTPBasicAuth` from the 'requests' package takes credentials and generates the required Basic Auth header (for more information on Basic Auth see our [code example](https://github.com/sipgate/sipgateio-basicauth-python)).
+We use the python package 'requests' for request generation and execution. The `post` function takes as arguments the request URL, headers, an authorization header, and the request body. The request URL consists of the base URL defined above and the endpoint `/sessions/sms`. The function `HTTPBasicAuth` from the 'requests' package takes credentials and generates the required Basic Auth header (for more information on Basic Auth see our [code example](https://github.com/sipgate-io/sipgateio-basicauth-python)).
 
 ```python
 response = requests.post(
