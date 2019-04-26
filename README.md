@@ -21,7 +21,7 @@ Install dependencies:
 $ pip3 install -r requirements.txt
 ```
 
-In order to run the code you have to set the following variables in [main.py](./main.py):
+In order to run the code you have to set the following variables in [sendsms.py](./sendsms.py):
 
 ```python
 username = 'YOUR_SIPGATE_EMAIL'
@@ -58,7 +58,7 @@ The `smsId` uniquely identifies the extension from which you wish to send your m
 Run the application:
 
 ```bash
-$ python3 main.py
+$ python3 sendsms.py
 ```
 
 ##### How It Works
