@@ -8,7 +8,7 @@ For further information regarding the sipgate REST API please visit https://api.
 
 ### Prerequisites
 
-- python3.6
+- python3
 - pip3
 
 ### How To Use
@@ -27,7 +27,7 @@ In order to run the code you have to set the following variables in [main.py](./
 username = 'YOUR_SIPGATE_EMAIL'
 password = 'YOUR_SIPGATE_PASSWORD'
 
-smsId = 'YOUR_SIPGATE_SMS_EXTENSION'
+sms_id = 'YOUR_SIPGATE_SMS_EXTENSION'
 
 message = 'YOUR_MESSAGE'
 recipient = 'RECIPIENT_PHONE_NUMBER'
@@ -39,17 +39,17 @@ The `smsId` uniquely identifies the extension from which you wish to send your m
 > In order to send a delayed message uncomment the following line and set the desired date and time in the future (up to one month):
 >
 > ```python
-> sendAt = datetime.datetime(day=24, month=7, year=2001, hour=13, minute=37)
+> send_at = datetime.datetime(day=24, month=7, year=2001, hour=13, minute=37)
 > ```
 >
-> Additionally, in the `requestBody` object uncomment the `sendAt` property.
+> Additionally, in the `request_body` object uncomment the `sendAt` property.
 >
 > ```python
-> requestBody = {
+> request_body = {
 > 	'smsId': smsId,
 > 	'recipient': recipient,
 > 	'message': message,
-> 	'sendAt': sendAt.timestamp()
+> 	'sendAt': send_at.timestamp()
 > }
 > ```
 >
@@ -66,7 +66,7 @@ $ python3 main.py
 The sipgate REST API is available under the following base URL:
 
 ```python
-baseURL = 'https://api.sipgate.com/v2'
+base_url = 'https://api.sipgate.com/v2'
 ```
 
 The API expects request data in JSON format. Thus the `Content-Type` header needs to be set accordingly.
@@ -81,7 +81,7 @@ The request body contains the `smsId`, `recipient`, and `message` specified abov
 
 ```python
 requestBody = {
-	'smsId': smsId,
+	'smsId': sms_id,
 	'recipient': recipient,
 	'message': message
 }
@@ -91,7 +91,7 @@ We use the python package 'requests' for request generation and execution. The `
 
 ```python
 response = requests.post(
-	f'{baseURL}/sessions/sms',
+	base_url + '/sessions/sms',
 	headers=headers,
 	auth=requests.auth.HTTPBasicAuth(username, password),
 	json=requestBody
