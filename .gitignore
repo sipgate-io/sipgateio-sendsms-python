@@ -223,4 +223,5 @@ tags
 # Ignore all local history of files
 .history
 
+__pycache__/
 # End of https://www.gitignore.io/api/vim,git,macos,linux,pycharm+all,intellij+all,visualstudiocode
