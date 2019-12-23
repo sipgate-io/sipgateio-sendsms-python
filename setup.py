@@ -12,10 +12,10 @@ with open('LICENSE') as f:
 setup(
     name='sipgateio-sendsms-python',
     version='0.1.0',
-    description='A demonstration of how to send SMS using the sipgate REST.',
+    description='A demonstration of how to send SMS using sipgate.io',
     long_description=readme,
-    author='sipgate',
-    author_email='',
+    author='sipgate.io Team',
+    author_email='io-team@sipgate.de',
     url='https://github.com/sipgate/sipgateio-sendsms-python',
     license=license,
     packages=find_packages(exclude=())
