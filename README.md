@@ -111,12 +111,19 @@ By default 'sipgate' will be used as the sender. It is only possible to change t
 
 A Web SMS extension consists of the letter 's' followed by a number (e.g. 's0'). The sipgate API uses the concept of Web SMS extensions to identify devices within your account that are enabled to send SMS. In this context the term 'device' does not necessarily refer to a hardware phone but rather a virtual connection.
 
-You can find out what your extension is as follows:
+You can use the sipgate api to find out what your extension is. For example:
 
-1. Log into your [sipgate account](https://app.sipgate.com/connections/sms)
-2. Use the sidebar to navigate to the **Connections** (_Anschlüsse_) tab
-3. Click **SMS** (if this option is not displayed you might need to book the **Web SMS** feature from the Feature Store)
-4. The URL of the page should have the form `https://app.sipgate.com/{...}/connections/sms/{smsId}` where `{smsId}` is your Web SMS extension.
+```bash
+curl \
+--user username:password \
+https://api.sipgate.com/v2/{userId}/sms
+```
+Replace `username` and `password` with your sipgate credentials and `userId` with your sipgate user id.
+
+The user id consists of the letter 'w' followed by a number (e.g. 'w0'). It can be found as follows:
+
+1. Log into your [sipgate account](https://app.sipgate.com)
+2. The URL of the page should have the form `https://app.sipgate.com/{userId}/...` where `{userId}` is your user id.
 
 ### Common Issues
 
