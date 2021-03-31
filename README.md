@@ -103,10 +103,9 @@ response = requests.post(
 By default 'sipgate' will be used as the sender. It is only possible to change the sender to a mobile phone number by verifying ownership of said number. In order to accomplish this, proceed as follows:
 
 1. Log into your [sipgate account](https://app.sipgate.com/connections/sms)
-2. Use the sidebar to navigate to the **Connections** (_Anschlüsse_) tab
-3. Click **SMS** (if this option is not displayed you might need to book the **Web SMS** feature from the Feature Store)
-4. Click the gear icon on the right side of the **Caller ID** box and enter the desired sender number.
-5. Proceed to follow the instructions on the website to verify the number.
+2. Click **SMS** in the sidebar (if this option is not displayed you might need to book the **Web SMS** feature from the Feature Store)
+3. Click the gear icon on the right side of the **Caller ID** box and enter the desired sender number.
+4. Proceed to follow the instructions on the website to verify the number.
 
 ### Web SMS Extensions
 
