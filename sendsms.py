@@ -5,8 +5,8 @@ import requests
 
 def send_sms():
     base_url = 'https://api.sipgate.com/v2'
-    username = 'YOUR_SIPGATE_EMAIL'
-    password = 'YOUR_SIPGATE_PASSWORD'
+    tokenId = 'YOUR_SIPGATE_TOKEN_ID'
+    token = 'YOUR_SIPGATE_TOKEN'
 
     sms_id = 'YOUR_SIPGATE_SMS_EXTENSION'
 
@@ -31,7 +31,7 @@ def send_sms():
     response = requests.post(
         base_url + '/sessions/sms',
         headers=headers,
-        auth=requests.auth.HTTPBasicAuth(username, password),
+        auth=requests.auth.HTTPBasicAuth(tokenId, token),
         json=request_body
     )
 

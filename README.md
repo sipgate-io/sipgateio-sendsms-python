@@ -24,8 +24,8 @@ $ pip3 install -r requirements.txt
 In order to run the code you have to set the following variables in [sendsms.py](./sendsms.py):
 
 ```python
-username = 'YOUR_SIPGATE_EMAIL'
-password = 'YOUR_SIPGATE_PASSWORD'
+tokenId = 'YOUR_SIPGATE_TOKEN'
+token = 'YOUR_SIPGATE_TOKEN_ID'
 
 sms_id = 'YOUR_SIPGATE_SMS_EXTENSION'
 
@@ -93,7 +93,7 @@ We use the python package 'requests' for request generation and execution. The `
 response = requests.post(
 	base_url + '/sessions/sms',
 	headers=headers,
-	auth=requests.auth.HTTPBasicAuth(username, password),
+	auth=requests.auth.HTTPBasicAuth(tokenId, token),
 	json=requestBody
 )
 ```
@@ -115,10 +115,10 @@ You can use the sipgate api to find out what your extension is. For example:
 
 ```bash
 curl \
---user username:password \
+--user tokenId:token \
 https://api.sipgate.com/v2/{userId}/sms
 ```
-Replace `username` and `password` with your sipgate credentials and `userId` with your sipgate user id.
+Replace `tokenId` and `token` with your sipgate credentials and `userId` with your sipgate user id.
 
 The user id consists of the letter 'w' followed by a number (e.g. 'w0'). It can be found as follows:
 
@@ -140,7 +140,7 @@ Possible reasons are:
 | reason                                                                                                                                              | errorcode |
 | --------------------------------------------------------------------------------------------------------------------------------------------------- | :-------: |
 | bad request (e.g. request body fields are empty or only contain spaces, timestamp is invalid etc.)                                                  |    400    |
-| username and/or password are wrong                                                                                                                  |    401    |
+| tokenId and/or token are wrong                                                                                                                      |    401    |
 | insufficient account balance                                                                                                                        |    402    |
 | no permission to use specified SMS extension (e.g. SMS feature not booked, user password must be reset in [web app](https://app.sipgate.com/login)) |    403    |
 | wrong REST API endpoint                                                                                                                             |    404    |
