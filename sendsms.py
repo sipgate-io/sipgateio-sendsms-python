@@ -8,6 +8,7 @@ def send_sms():
     tokenId = 'YOUR_SIPGATE_TOKEN_ID'
     token = 'YOUR_SIPGATE_TOKEN'
 
+    # for example `s0`. you can list the available sms extensions at `/{userId}/sms`: https://api.sipgate.com/v2/doc#/sms/getSmsExtensions
     sms_id = 'YOUR_SIPGATE_SMS_EXTENSION'
 
     message = 'YOUR_MESSAGE'
