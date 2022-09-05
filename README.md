@@ -21,16 +21,12 @@ Install dependencies:
 $ pip3 install -r requirements.txt
 ```
 
-In order to run the code you have to set the following variables in [sendsms.py](./sendsms.py):
+Create the `.env` file by copying the `.env.example`. Set the values according to the comment above each variable.
+
+In order to run the code you have to set the following variable in [sendsms.py](./sendsms.py):
 
 ```python
-tokenId = 'YOUR_SIPGATE_TOKEN'
-token = 'YOUR_SIPGATE_TOKEN_ID'
-
-sms_id = 'YOUR_SIPGATE_SMS_EXTENSION'
-
 message = 'YOUR_MESSAGE'
-recipient = 'RECIPIENT_PHONE_NUMBER'
 ```
 
 The token should have the `sessions:sms:write` scope. For more information about personal access tokens visit https://www.sipgate.io/rest-api/authentication#personalAccessToken.
